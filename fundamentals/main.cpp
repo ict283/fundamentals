@@ -15,8 +15,8 @@ int main(void) {
     int x = 5;
     
     
-    // References '&'
-    int& y = x;                //aliasing
+    //References '&' (aliasing)
+    int& y = x;
     
     y++;
     cout<<x<<endl;
@@ -26,33 +26,38 @@ int main(void) {
     cout<<y<<endl;
     
     
-    // Pointers '*'
+    //Pointers '*'
+    
     int* p1 = &x;             //pointer to 'stack' memory
     cout<<&x<<endl;         //memory address of variable x
     cout<<p1<<endl;         //address stored in p1
     cout<<*p1<<endl;        //value store at p1's address
     
-    int* p2 = new int;     //Variable Initialisation (heap)
+    
+    //Variable Initialisation (stack)
+    
+    int* p2 = new int;     //pointer to 'heap' memory
     *p2 = 10;                //store value at memory address
     cout<<p2<<endl;        //address stored in p2
     cout<<*p2<<endl;       //value store at p2's address
     
     
-    // Pass-by-value
+    //Pass-by-value
     square_v1(x);
     cout<<x<<endl;
     
     
-    // Pass-by-reference
+    //Pass-by-reference
     square_v2(x);
     cout<<x<<endl;
     
     
-    // Pass-by-address
+    //Pass-by-address
     square_v3(&x);
     cout<<x<<endl;
     
     return 0;
+    
 }
 
 
@@ -70,5 +75,8 @@ void square_v3 (int* n) {
     *n = *n * *n;
 }
 
-//References
+
+//Note:
+//These fundamental concepts can be applied across all data types
+//ie. primitive and user-defined
 //https://www.programiz.com/cpp-programming/data-types
