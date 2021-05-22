@@ -29,7 +29,11 @@ int main(void) {
     cout<<*p1<<endl; //value store at p1's address
 
     //Variable Initialisation (heap)
-
+    int* p2 = new int;
+    *p2 = 10;           //store value at memory address
+    cout<<p2<<endl;   //address stored in p2
+    cout<<*p2<<endl;  //value stored at p2's address
+    
     //Pass-by-value
 
     //Pass-by-reference
