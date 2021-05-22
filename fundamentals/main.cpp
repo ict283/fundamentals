@@ -6,6 +6,7 @@
 using namespace std;        //std::
 
 //method declaration
+void square_v1 (int n);
 
 int main(void) {
 
@@ -35,6 +36,8 @@ int main(void) {
     cout<<*p2<<endl;  //value stored at p2's address
     
     //Pass-by-value
+    square_v1 (x);
+    cout<<x<<endl;
 
     //Pass-by-reference
 
@@ -44,7 +47,9 @@ int main(void) {
 }
 
 //method implementation
-
+void square_v1 (int n) {
+    n = n * n;
+}
 
 //Note:
 //These fundamental concepts can be applied across all data types
