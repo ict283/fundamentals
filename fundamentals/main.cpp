@@ -9,6 +9,7 @@ using namespace std;        //std::
 void square_v1 (int n);
 void square_v2 (int& n);
 void square_v3 (int* n);
+int* square_assign_mem (int n);
 
 int main(void) {
 
@@ -48,6 +49,11 @@ int main(void) {
     //Pass-by-address
     square_v3 (&x); //pass the address of x
     cout<<x<<endl;
+    
+    //Assign persistent memory
+    int* p3 = square_assign_mem(x);
+    cout<<p3<<endl;
+    cout<<*p3<<endl;
 
     return 0;
 }
@@ -63,6 +69,10 @@ void square_v2 (int& n) {
 
 void square_v3 (int* n) {
     *n = *n * *n;
+}
+
+int* square_assign_mem (int n) {
+    return new int (n*n);
 }
 
 //Note:
