@@ -10,6 +10,7 @@ using namespace std;        //std::
 int main(void) {
 
     //Variable Initialisation (stack)
+    int x = 5;
 
     //References '&' (aliasing)
 
