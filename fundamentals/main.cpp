@@ -13,7 +13,15 @@ int main(void) {
     int x = 5;
 
     //References '&' (aliasing)
-
+    int& y = x;
+    
+    y++;
+    cout<<x<<endl;
+    cout<<y<<endl;
+    x--;
+    cout<<x<<endl;
+    cout<<y<<endl;
+    
     //Pointers '*'
 
     //Variable Initialisation (stack)
