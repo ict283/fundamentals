@@ -19,11 +19,11 @@ int main(void) {
     int& y = x;
     
     y++;
-    cout<<x<<endl;
-    cout<<y<<endl;
+    cout<<x<<endl; //6
+    cout<<y<<endl; //6
     x--;
-    cout<<x<<endl;
-    cout<<y<<endl;
+    cout<<x<<endl; //5
+    cout<<y<<endl; //5
 
     //Pointers '*'
     int* p1 = &x;
@@ -38,15 +38,15 @@ int main(void) {
     cout<<*p2<<endl;  //value stored at p2's address
     
     //Pass-by-value
-    square_v1 (x); 
+    square_v1 (x); //pass the value of x
     cout<<x<<endl;
 
     //Pass-by-reference
-    square_v2 (x);
+    square_v2 (x); //pass a reference to x
     cout<<x<<endl;
     
     //Pass-by-address
-    square_v3 (&x);
+    square_v3 (&x); //pass the address of x
     cout<<x<<endl;
 
     return 0;
