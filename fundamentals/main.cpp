@@ -7,6 +7,7 @@ using namespace std;        //std::
 
 //method declaration
 void square_v1 (int n);
+void square_v2 (int& n);
 
 int main(void) {
 
@@ -40,7 +41,9 @@ int main(void) {
     cout<<x<<endl;
 
     //Pass-by-reference
-
+    square_v2 (x);
+    cout<<x<<endl;
+    
     //Pass-by-address
 
     return 0;
@@ -48,6 +51,10 @@ int main(void) {
 
 //method implementation
 void square_v1 (int n) {
+    n = n * n;
+}
+
+void square_v2 (int& n) {
     n = n * n;
 }
 
