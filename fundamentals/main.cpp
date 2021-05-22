@@ -21,10 +21,14 @@ int main(void) {
     x--;
     cout<<x<<endl;
     cout<<y<<endl;
-    
-    //Pointers '*'
 
-    //Variable Initialisation (stack)
+    //Pointers '*'
+    int* p1 = &x;
+    cout<<&x<<endl;  //address of x
+    cout<<p1<<endl;  //address stored in p1
+    cout<<*p1<<endl; //value store at p1's address
+
+    //Variable Initialisation (heap)
 
     //Pass-by-value
 
