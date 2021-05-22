@@ -54,6 +54,12 @@ int main(void) {
     int* p3 = square_assign_mem(x);
     cout<<p3<<endl;
     cout<<*p3<<endl;
+    
+    //Clean up heap memory (manually)
+    delete p2;
+    p2 = nullptr;
+    delete p3;
+    p3 = nullptr;
 
     return 0;
 }
