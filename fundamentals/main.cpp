@@ -8,6 +8,7 @@ using namespace std;        //std::
 //method declaration
 void square_v1 (int n);
 void square_v2 (int& n);
+void square_v3 (int* n);
 
 int main(void) {
 
@@ -37,7 +38,7 @@ int main(void) {
     cout<<*p2<<endl;  //value stored at p2's address
     
     //Pass-by-value
-    square_v1 (x);
+    square_v1 (x); 
     cout<<x<<endl;
 
     //Pass-by-reference
@@ -45,6 +46,8 @@ int main(void) {
     cout<<x<<endl;
     
     //Pass-by-address
+    square_v3 (&x);
+    cout<<x<<endl;
 
     return 0;
 }
@@ -56,6 +59,10 @@ void square_v1 (int n) {
 
 void square_v2 (int& n) {
     n = n * n;
+}
+
+void square_v3 (int* n) {
+    *n = *n * *n;
 }
 
 //Note:
